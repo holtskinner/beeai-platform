@@ -250,7 +250,7 @@ async def _run_agent(
         LLMServiceExtensionClient(llm_spec).fulfillment_metadata(
             llm_fulfillments={
                 key: LLMFulfillment(
-                    api_base="{platform_url}/api/v1/llm/",
+                    api_base="{platform_url}/api/v1/openai/",
                     api_key=context_token.token.get_secret_value(),
                     api_model="dummy",
                 )
@@ -263,7 +263,7 @@ async def _run_agent(
         EmbeddingServiceExtensionClient(embedding_spec).fulfillment_metadata(
             embedding_fulfillments={
                 key: EmbeddingFulfillment(
-                    api_base="{platform_url}/api/v1/llm/",
+                    api_base="{platform_url}/api/v1/openai/",
                     api_key=context_token.token.get_secret_value(),
                     api_model="dummy",
                 )

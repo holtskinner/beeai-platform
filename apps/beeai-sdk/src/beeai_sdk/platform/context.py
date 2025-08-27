@@ -31,7 +31,7 @@ class Permissions(ContextPermissions):
     embeddings: set[Literal["*"] | ResourceIdPermission] = set()
     a2a_proxy: set[Literal["*"]] = set()
     providers: set[Literal["read", "write", "*"]] = set()  # write includes "show logs" permission
-    variables: set[Literal["read", "write", "*"]] = set()
+    provider_variables: set[Literal["read", "write", "*"]] = set()
     contexts: set[Literal["read", "write", "*"]] = set()
 
 
